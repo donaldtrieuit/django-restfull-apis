@@ -1,5 +1,22 @@
-# Byte-compiled / optimized / DLL files
+
+# Created by https://www.gitignore.io/api/django
+# Edit at https://www.gitignore.io/?templates=django
+
+### Django ###
+*.log
+*.pot
+*.pyc
 __pycache__/
+local_settings.py
+db.sqlite3
+media
+
+# If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
+# in your Git repository. Update and uncomment the following line accordingly.
+# <django-project-name>/staticfiles/
+
+### Django.Python Stack ###
+# Byte-compiled / optimized / DLL files
 *.py[cod]
 *$py.class
 
@@ -47,18 +64,13 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-*.py,cover
 .hypothesis/
 .pytest_cache/
 
 # Translations
 *.mo
-*.pot
 
 # Django stuff:
-*.log
-local_settings.py
-db.sqlite3
 db.sqlite3-journal
 
 # Flask stuff:
@@ -91,13 +103,6 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
 # SageMath parsed files
 *.sage.py
 
@@ -109,6 +114,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+staticfiles/
+log/
 
 # Spyder project settings
 .spyderproject
@@ -127,3 +134,22 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# End of https://www.gitignore.io/api/django
+*.swp
+private/
+./reviewmanager/reviews/migrations
+
+# IDE / Editor
+.idea
+.vscode
+
+# macOS
+.DS_Store
+
+# data directory
+.mysql_data/
+
+*.pem
+
+docker-compose.yml
